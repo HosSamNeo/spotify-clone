@@ -15,7 +15,8 @@ export const shazamCoreApi = createApi({
         getSongDetails: builder.query({ query : (songId) => `/tracks/details?track_id=${songId}` }),
         getSongRelated : builder.query({ query : (songId) => `/tracks/related?track_id=${songId}` }),
         getArtistDeatils : builder.query({ query : (artistId) => `/artists/details?artist_id=${artistId}`}),
-
+        getSongsByCountry : builder.query({ query : (country) => `/charts/country?country_code=${country}`}),
+        
     }),
 
 })
@@ -26,6 +27,7 @@ export const {
     useGetSongDetailsQuery,
     useGetSongRelatedQuery,
     useGetArtistDeatilsQuery,
+    useGetSongsByCountryQuery,
 
 
 } = shazamCoreApi;
