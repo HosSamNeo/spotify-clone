@@ -6,7 +6,9 @@ import { Error , Loader , songCard } from '../components';
 
 const AroundYou = () => {
     const [country , setCountry] = useState('');
-    
+    const [loading , setLoading] = useState('');
+    const {activeSong , isPlaying } = useSelector((state) => state.player);
+
     return (
     
     <div>AroundYou</div>
